@@ -1,9 +1,5 @@
 import sqlalchemy as sa
 
-from src.tests.fake_data.fake_data import create_fake_users, create_fake_devices, insert_fake_users, \
-    insert_fake_devices, insert_fake_roles, insert_fake_devices_to_roles, insert_fake_user_roles, create_fake_roles, \
-    create_fake_device_roles, create_fake_user_roles
-
 # db_url = "postgresql+asyncpg://test_user:test_password@127.0.0.1:5435/test_db"
 # engine = create_async_engine(db_url)
 
