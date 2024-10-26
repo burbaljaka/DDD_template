@@ -113,40 +113,4 @@ async def test_data(
         session,
         table_names
 ):
-    await insert_fake_users(session, create_fake_users())
-    await insert_fake_devices(session, create_fake_devices())
-    await insert_fake_roles(session, create_fake_roles())
-    await insert_fake_devices_to_roles(session, create_fake_device_roles())
-    await insert_fake_user_roles(session, create_fake_user_roles())
-
-    yield
-
-    await session.execute(
-        sa.text(f"TRUNCATE TABLE {table_names} RESTART IDENTITY CASCADE;")
-    )
-    await session.commit()
-
-
-@pytest.fixture
-def admin_user():
-    return create_fake_users()[0]
-
-
-@pytest.fixture
-def common_user():
-    return create_fake_users()[1]
-
-
-@pytest.fixture
-def common_user_device():
-    return create_fake_devices()[1]
-
-
-@pytest.fixture
-def not_common_user_device():
-    return create_fake_devices()[0]
-
-
-@pytest.fixture
-def get_devices():
-    return create_fake_devices()
+    ...
